@@ -17,6 +17,6 @@ public class RestaurantController {
     private final RestaurantService restaurantService;
     @GetMapping
     public ResponseEntity<List<RestaurantDTO>> getAll() {
-        return ResponseEntity.ok().body(restaurantService.findAll());
+        return ResponseEntity.ok(restaurantService.findAll());
     }
 }

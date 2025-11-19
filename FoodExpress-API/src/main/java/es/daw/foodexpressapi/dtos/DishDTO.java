@@ -1,6 +1,7 @@
-package es.daw.foodexpressapi.entities;
+package es.daw.foodexpressapi.dtos;
 
-import jakarta.persistence.*;
+
+import lombok.Data;
 
 
 //CREATE TABLE IF NOT EXISTS dishes
@@ -33,21 +34,12 @@ import jakarta.persistence.*;
 //id
 //)
 //        )
+@Data
+public class DishDTO {
 
-@Entity
-public class Dish {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
     private Double price;
-
     private String category;
-
-    @ManyToOne
-    private Restaurant restaurant;
-
-
+    private Long restaurantId;
 }

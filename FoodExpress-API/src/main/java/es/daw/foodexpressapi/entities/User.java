@@ -19,6 +19,6 @@ public class User {
 
     private String email;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Role role;
 }
